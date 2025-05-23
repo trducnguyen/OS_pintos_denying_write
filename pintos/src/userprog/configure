@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Creating Makefile..."
+
+CURDIR_NAME=$(basename "$(pwd)")
+echo "SRCDIR = .." > Makefile
+echo "include \$(SRCDIR)/Makefile.$CURDIR_NAME" >> Makefile
+
+echo "Done."
+
